@@ -1,0 +1,26 @@
+-
+  title: "正确的用例"
+  request:
+    method: post
+    url: /dev-api/login
+    headers: null
+    json:
+      username: admin
+      password: admin123
+  validate:
+    code: 200
+    msg: "操作成功"
+
+#
+#-
+#  title: "反面的用例"
+#  request:
+#    method: post
+#    url: /dev-api/login
+#    headers: null
+#    json:
+#      username: admin
+#      password: admin
+#  validate:
+#    code: 500
+#    msg: "用户不存在/密码错误"
