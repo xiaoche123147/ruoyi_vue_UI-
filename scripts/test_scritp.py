@@ -13,7 +13,7 @@ from base.logs import log
 class Mytestcase(unittest.TestCase):
     driver = None
 
-    @pytest.fixture(autouse=True)
+    @pytest.fixture()
     def server(self):
         self.driver = Getdriver().Get_driver()
         self.adduser = Add_User(self.driver)

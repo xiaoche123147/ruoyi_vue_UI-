@@ -9,6 +9,9 @@ class Api_common:
         self.headers={
             "Content-Type": "application/json"
         }
+    def request(self,path,**kwargs):
+        url=path if path.startswith("http") else r"{self.base_url}/{path.lstrip('/')}"
+
     #提供鉴权头
     def set_token(self,token):
         self.headers["Authorization"] =f"Bearer {token}"
