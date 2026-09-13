@@ -11,7 +11,10 @@ class Api_common:
         }
     def request(self,path,**kwargs):
         url=path if path.startswith("http") else r"{self.base_url}/{path.lstrip('/')}"
-
+    def cahngshi (self):
+        print("wochsiasdhk af ")
+    def ceshiceshi(self):
+        print("用于测试的")
     #提供鉴权头
     def set_token(self,token):
         self.headers["Authorization"] =f"Bearer {token}"
