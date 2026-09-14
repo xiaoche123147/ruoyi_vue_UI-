@@ -5,7 +5,7 @@ from requests import Session
 class Api_common:
     def __init__(self):
         self.session = Session()
-        self.base_url="http://localhost"
+        self.base_url="http://127.0.0.1:8081/"
         self.headers={
             "Content-Type": "application/json"
         }
