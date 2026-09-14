@@ -11,6 +11,9 @@ pipeline {
     environment {
         PYTHONIOENCODING = 'utf-8'
         PYTHONUNBUFFERED = '1'
+        PIP_INDEX_URL    = 'https://pypi.tuna.tsinghua.edu.cn/simple'
+        PIP_TRUSTED_HOST = 'pypi.tuna.tsinghua.edu.cn'
+        PIP_DISABLE_PIP_VERSION_CHECK = '1'
     }
 
     tools {
@@ -23,7 +26,6 @@ pipeline {
                 bat '''
                     if exist .venv rmdir /s /q .venv
                     python -m venv .venv
-                    .venv\\Scripts\\python.exe -m pip install --upgrade pip
                     .venv\\Scripts\\python.exe -m pip install -r requirements.txt
                 '''
             }
